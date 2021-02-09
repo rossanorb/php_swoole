@@ -1,0 +1,10 @@
+version: '3'
+services:
+    php:
+        container_name: "php_swoole"
+        build: .
+        volumes:
+            - ./api:/var/www
+        ports:
+            - "9000:9000"        
+        command:  php index.php
